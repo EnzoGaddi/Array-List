@@ -4,6 +4,7 @@ Enzo Gaddi
 Using and understanding arrays and array lists to produce outputs in different situations
  */
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class arrayDemo {
@@ -11,26 +12,32 @@ public class arrayDemo {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter the size of the array: ");
-        int n = sc.nextInt();
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        list.add(100);
+        list.add(200);
+        list.add(300);
+        list.add(400);
+        list.add(500);
+        list.add(600);
+        list.add(700);
+        list.add(800);
+        list.add(900);
 
-        int[] myNumbers = new int[11];
-        myNumbers[0] = 100;
-        myNumbers[1] = 200;
-        myNumbers[2] = 300;
-        myNumbers[3] = 400;
-        myNumbers[4] = 500;
-        myNumbers[5] = 600;
-        myNumbers[6] = 700;
-        myNumbers[7] = 800;
-        myNumbers[8] = 900;
-        myNumbers[9] = 1000;
-        myNumbers[10] = n;
-
-        for(int i = 0; i < myNumbers.length; i++)
+        for(Integer i : list)
         {
-            System.out.println(myNumbers[i]);
+            System.out.println("Element at index: " + i);
         }
+
+        System.out.println("Please enter new number: ");
+        Integer newNum = sc.nextInt();
+
+        list.add(newNum);
+
+        for(Integer x : list)
+        {
+            System.out.println("Element at index: " + x);
+        }
+
     }
 
 }
